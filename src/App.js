@@ -1,12 +1,11 @@
-import { ListPokemon } from './components/pokemons';
+import { AppRoutes } from './pages/routes';
 import './App.css';
 
 
 function App() {
  return (
   <>
-  
-  <ListPokemon/>
+   <AppRoutes/>
   </>
  )
 }

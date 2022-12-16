@@ -2,31 +2,25 @@
 .poke-section{
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  
+  justify-content: center;
+  min-width: 100%;
+  gap: 50px;
 }
-.poke-log{
-  display: flex;
-  justify-content: flex-start;
-  width: 90%;
-  height: 20%;
-  margin-top: -130px;
-  
-}
+
 .poke-log-img{
-  width: 150px;
-  height: 80px;
+  width: 250px;
+  height: 150px;
 }
 .poke-btn{
   padding: 15px;
   cursor: pointer;
   background-color: red;
-  color:#ffff;
-  border: 1px solid black;
+  color: #fff;
+  border: 1.5px solid black;
   border-radius: 50px;
   font-size: 20px;
-  width: 230px;
+  width: 180px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   font-family: -apple-system- ;
   
@@ -34,31 +28,29 @@
 .btn{
   display: flex;
   justify-content: flex-end;
-  width: 90%;
-  margin-bottom: 30px;
-  
+  width: 80%;
 }
 .poke-btn:hover{
   color: black;
 }
-
-
-.poke-card{
+.poke-container{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  
 }
+  
 .poke-list{
   display: flex;
+  justify-content: center;
+  background-color:white;
   margin: 10px;
-  background-color:rgb(249, 249, 249);
-  width: 260px;
+  min-width: 260px;
+  min-height: 100px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
   cursor: pointer;
-  }
+  padding: 10px;
+}
 
 .poke-data{
   display: flex;
@@ -70,6 +62,6 @@
 }
 .poke-img{
   display: flex;
-  justify-content: end;
+  justify-content: flex-end
   
 }
