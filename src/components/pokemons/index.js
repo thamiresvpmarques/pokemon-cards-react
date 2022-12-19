@@ -15,6 +15,7 @@ function ListPokemon() {
            });
            const results = await Promise.all(pokePromises);
            setPokemons(results)
+           
         }
         fetchData()
         
