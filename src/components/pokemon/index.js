@@ -1,4 +1,4 @@
-import { getPokemonInfo} from "../../services/api";
+import { getPokemonInfo,getPokemon} from "../../services/api";
 import { useState,useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -6,18 +6,22 @@ import { Link } from "react-router-dom";
 function Pokemon() {
 
     const [pokemon, setPokemon] = useState ({});
+    const [abilities, setAbilities] = useState ([])
     const { name } = useParams ()
    
     useEffect (() =>{
         const fetchData = async () =>{
            const data = await getPokemonInfo(name);
            
-           setPokemon(data)
-          console.log(data)
-        }
+           const pokeAbilities = data.abilities.map((element)=> getPokemon(element.ability.url))
+           const pokePromises = await Promise.all (pokeAbilities)
+           
+          setAbilities(pokePromises)
+          setPokemon(data)
+          }
         fetchData()
     }, [])
-    console.log(pokemon)
+    
     return (
       <section>
         <Link to="/">Home</Link>
@@ -32,14 +36,27 @@ function Pokemon() {
 
            <img alt={pokemon.name} src={pokemon.sprites?.other.dream_world.front_default} />
 
-           {pokemon.moves.map((pokemon,index) =>{
-                         return(
-                                  <ul key={index}>
-                                    <li>{pokemon?.moves}</li>
-                                  </ul>
-                                  )
-                                  })}
-           
+           {pokemon.moves?.map((poke,index) =>{
+                return(
+                   <ul key={index}>
+                    <li>{poke.move.name}</li>
+                   </ul>)
+             })}
+            
+            {abilities.map((ability) =>{
+             const abilitiesFilter = ability.flavor_text_entries.filter((description)=>{
+                return description.language.name === "en"
+              })
+                return (
+                  <li key={ability.name}>{ability.name} + {abilitiesFilter[0].flavor_text}</li>
+                )
+            })}
+
+            
+
+      
+                         
+                                 
           </div>
                 
         </div>
