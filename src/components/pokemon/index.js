@@ -2,13 +2,15 @@ import { getPokemonInfo,getPokemon} from "../../services/api";
 import { useState,useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 function Pokemon() {
 
     const [pokemon, setPokemon] = useState ({});
     const [abilities, setAbilities] = useState ([])
     const { name } = useParams ()
-   
+    
+
     useEffect (() =>{
         const fetchData = async () =>{
            const data = await getPokemonInfo(name);
@@ -23,7 +25,7 @@ function Pokemon() {
     }, [])
     
     return (
-      <section>
+      <section >
         <Link to="/">Home</Link>
         <div className="poke-card">
 
@@ -31,7 +33,7 @@ function Pokemon() {
          
            <div className="poke-data">
             <h3 className="poke-name">{pokemon.name}</h3>
-            <span className="poke-id"> #{pokemon.id}</span>
+            
            </div>
 
            <img alt={pokemon.name} src={pokemon.sprites?.other.dream_world.front_default} />
@@ -52,11 +54,6 @@ function Pokemon() {
                 )
             })}
 
-            
-
-      
-                         
-                                 
           </div>
                 
         </div>
