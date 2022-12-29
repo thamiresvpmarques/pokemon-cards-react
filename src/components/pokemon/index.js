@@ -62,7 +62,7 @@ function Pokemon() {
            </DivAbilities>
 
            <H4>Type</H4>
-           <DivType>
+           <DivType style={{color:theme.color}}>
            {type.map((type,index) =>{
              return (
               <ul key={index}>
