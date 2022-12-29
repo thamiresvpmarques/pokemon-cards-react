@@ -5,11 +5,11 @@ import { Button } from "../button/button"
 
 export const ThemeTogglerButton = () =>{
      
-    const { theme, setTheme } = useContext (ThemeContext)
+    const { theme, setThemes } = useContext (ThemeContext)
    
     return(
         <div>
-         <Button onClick ={()=> setTheme(theme === themes.light ? themes.dark : themes.light)}>Theme</Button>
+         <Button onClick ={()=> setThemes(theme === themes.light ? themes.dark : themes.light)}>Theme</Button>
         </div>
     )
 }

@@ -14,17 +14,20 @@ export const Button =(propos) =>{
 
 
 const BtnPoke = styled.button `
+    display:flex;
+    justify-content:center;
+    align-items:center;
     padding: 10px;
     border-radius: 20px;
     margin-top:10px;
     border:none;
     width: 90px;
+    height:20px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     font-size: 15px;
     color: grey;
     cursor:pointer;
-    color: gray;
-    transition: 1s;
+    transition: 0.75s;
 
     :hover{
         transform: scale(1.1);
