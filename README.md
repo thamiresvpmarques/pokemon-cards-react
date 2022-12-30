@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Pokédex - PokéApi
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Descrição da Aplicação:
+O propósito desta aplicação é exibir uma lista com dez pokémon contendo sua imagem e nome.
 
-In the project directory, you can run:
+Ao clicar em qualquer pokémon da lista, o usuário será levado a uma página com detalhes de seu pokémon escolhido.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Funcionalidade:
+![Adicionando mais pokémon](public/img/list-poke.gif)
+Adicionando mais Pokémon.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Mudando o tema entre ligth/dark](public/img/theme-poke.gif)
+Mudando o Tema entre ligth/dark.
 
-### `npm test`
+![Detalhes do Pokémon](public/img/data-poke.gif)
+Detalhes do Pokémon.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Voltando para Lista principal](public/img/data-poke.gif)
+Voltando Para Lista Principal
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Ferramentas Utilizadas:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**JavaScript + React** - *Para a aplicação ser Single Page Application (SPA).*
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Context Api** - *Para a criar o alterador entre o tema ligth e dark.*
 
-### `npm run eject`
+**Styled-components** - *Para estilização dos componentes.*
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**React-router-dom** - *Para a navegação entre as páginas.*
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Decisões:
+Sem dúvidas foi desafiador todo o planejamento desse projeto, optei então por um design minimalista, para dar todo foco na funcionalidade.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Quer rodar esse projeto no seu computador?
+- Para clonar/baixar esse projeto, siga as solicitações do GitHub. 
+- Usar um editor de código de sua preferência para abrir o projeto.
+- Passando o comando "npm install" no terminal, será instalados os pacotes que foram utilizados.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

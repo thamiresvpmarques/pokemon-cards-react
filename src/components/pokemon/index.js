@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { useContext } from "react";
 import { ThemeContext} from "../../contexts/theme-context";
 import { ThemeTogglerButton } from "../theme-toggler-button/theme-toggler-button";
+import { RxDoubleArrowLeft } from 'react-icons/rx'
 
 
 function Pokemon() {
@@ -31,16 +32,16 @@ function Pokemon() {
           }
         fetchData()
     }, [])
-    console.log(pokemon)
+    
     return (
       <Section style={{backgroundColor:theme.background}}>
-        <DivHome>
-         <Link to="/">Home</Link>
+
+        <Header>
+         <Link to="/"><RxDoubleArrowLeft/></Link>
          <ThemeTogglerButton/>
-        </DivHome>
+        </Header>
 
         <DivInfoPoke>
-          
           <DivPoke>
             <H3>{pokemon.name}</H3>
             <img alt={pokemon.name} src={pokemon.sprites?.other.dream_world.front_default} />
@@ -101,27 +102,27 @@ min-width: 100%;
 gap:40px;
 
 `
-const DivHome =styled.div`
+const Header =styled.header`
 display:flex;
 justify-content:space-between;
+align-items:center;
 min-width:100%;
 padding:30px;
 
 a{
-color:#fff;
-font-size:15px;
-font-family: -apple-system- ;
-padding:10px;
-width:100px;
 text-align:center;
-border-radius: 20px;
+color:#fff;
+font-size:30px;
 background-color:red;
-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+font-family: -apple-system- ;
+width:100px;
+height:30px;
+text-decoration:none;
+border-radius: 20px;
 transition:0.75s
 }
 a:hover{
-  background:#fff;
-  color:black;
+ color:black;
 }
 `
 const DivInfoPoke =styled.div `

@@ -39,8 +39,8 @@ function ListPokemon() {
                return (
                      <Link to={`/pokemon/${pokemon.name}`}> 
                          <DivData>
-                            <h3 className="poke-name">{pokemon.name}</h3>
                             <img alt={pokemon.name} src={pokemon.sprites.front_default} />
+                            <h3 className="poke-name">{pokemon.name}</h3>
                          </DivData>
                      </Link>
                      )
@@ -66,12 +66,14 @@ const DivHeader = styled.div`
 display: flex;
 align-items: center;
 justify-content: space-between;
-width: 85%;
+width: 90%;
+
 `
 const ImgLog = styled.img`
 width: 150px;
 height: 80px;
 cursor: pointer;
+
 `
 const DivContainer = styled.div`
 display:flex;
@@ -79,15 +81,17 @@ align-items: center;
 justify-content: center;
 flex-wrap: wrap;
 overflow-y:auto;
-max-height: 450px;
-max-width: 1500px;
-padding: 20px;
+height: 450px;
+width: 1400px;
+padding: 10px;
+border-top:1.75px solid #ffffff;
 
 a:-webkit-any-link {
     text-decoration:none;
 }
 @media(max-width:985px){
 width:350px;
+border:none;
 }
 `
 const DivData = styled.div`
@@ -97,22 +101,22 @@ align-items: center;
 justify-content: center;
 min-width: 250px;
 min-height: 150px;
-border: 0.15px solid #fff;
-margin: 0px 20px 20px 0px;
 padding: 10px;
 transition: 0.75s;
 
 @media(max-width:985px){
-min-width:120px;    
+min-width:120px;
 }
 
 h3{
 background-color: #fff;
-width: 100%;
+min-width: 150px;
 height: 100%;
 text-align: center;
 text-transform: capitalize;
 color: black;
+border-radius: 20px;
+box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 :hover{
     transform: scale(1.1);
