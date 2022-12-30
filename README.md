@@ -17,7 +17,7 @@ Mudando o Tema entre ligth/dark.
 ![Detalhes do Pokémon](public/img/data-poke.gif)
 Detalhes do Pokémon.
 
-![Voltando para Lista principal](public/img/data-poke.gif)
+![Voltando para Lista principal](public/img/data-poke-arrow.gif)
 Voltando Para Lista Principal
 
 
