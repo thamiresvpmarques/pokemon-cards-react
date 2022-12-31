@@ -1,6 +1,6 @@
 
 async function getListPoke (offSet) {
-    const response = await fetch( `https://pokeapi.co/api/v2/pokemon?limit=${offSet}&offset==${offSet}`)
+    const response = await fetch( `https://pokeapi.co/api/v2/pokemon?limit=10&offset==${offSet}`)
     return await response.json()
     
 }

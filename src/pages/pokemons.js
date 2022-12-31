@@ -1,11 +1,7 @@
-import { ListPokemon } from "../components/pokemons"
+import { ListPokemon } from "../components/pokemons";
 
-const PokemonList = () =>{
-    return (
-        <>
-        <ListPokemon/>
-        </>
-    )
-}
+const PokemonList = () => {
+  return <ListPokemon />;
+};
 
-export { PokemonList }
+export { PokemonList };

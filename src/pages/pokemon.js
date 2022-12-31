@@ -1,11 +1,7 @@
 import { Pokemon } from "../components/pokemon";
 
-const PokemonCard = () =>{
-    return (
-        <>
-        <Pokemon/>
-        </>
-    )
-}
+const PokemonCard = () => {
+  return <Pokemon />;
+};
 
-export {PokemonCard}
+export { PokemonCard };
